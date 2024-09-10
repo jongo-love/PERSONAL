@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-content">
+        <h1>About MOCHACHE.</h1>
+        <p >Hello! I'm Sam Mochache, a passionate computer science major based in Nairobi, Kenya. My journey intertwines technology and creativity, with a deep commitment to developing innovative solutions that enhance digital experiences.
+
+            Beyond my academic pursuits, I am also a professional artist. I enjoy blending technical expertise with artistic flair, creating projects that are not only functional but also visually captivating.
+            
+            My portfolio showcases a range of work that reflects my dedication to both coding and art. From software development projects to digital illustrations, each piece tells a story of continuous learning, growth, and a drive to push boundaries.
+            
+            Feel free to explore my work and get in touch if you'd like to collaborate or learn more about my journey.</p>
+        <p> I leverage advanced techniques to help organizations make data-driven decisions, optimize processes, and drive growth.</p>
+    </div>
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='a39db93a381b48dc4d734776dd22ea92.jpg') }}" alt="About Image">
+    </div>
+</section>
+
+<section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='teammember.jpg') }}" alt="Team Member 1">
+            <h3>Claire Onyango</h3>
+            <p>Data Scientist</p>
+        </div>
+        <div class="team-member">
+            <img width="200px" src="{{ url_for('static', filename='me.jpg') }}" alt="Team Member 2">
+            <h3>Sam Mochache</h3>
+            <p>Data Analyst</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='teammembersmile.jpg') }}" alt="Team Member 3">
+            <h3>Sandra Jepchirchir</h3>
+            <p>Machine Learning Engineer</p>
+        </div>
+    </div>
+</section>
+<style>
+    body, h1, h2, h3, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color and font styles */
+body {
+    background-image: url("static/grass.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* About section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.about-content {
+    max-width: 50%;
+    margin-right: 50px;
+    color: #ffffff;
+}
+
+.about-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+}
+.about-image:hover{
+    transform: scale(1.058);
+            opacity: 1;
+}
+
+.about-image img {
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+} 
+
+/* Team section */
+.team-section {
+    text-align: center;
+    margin: 50px;
+}
+
+.team-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-member {
+    flex: 1;
+    margin: 20px;
+    padding: 15px;
+    background-color: #ecece3;
+    opacity: 0.8;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+}
+.team-member:hover {
+            transform: scale(1.2);
+            opacity: 1;
+}
+.team-member:hover ~ .team-member {
+            transform: translateX(-33.33%);
+}
+.team-member img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color:white;
+}
+</style>
+{% endblock %}
