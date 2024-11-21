@@ -38,3 +38,7 @@ def CONTACT():
 
     return render_template('contact.html')
 
+@views.route('/visualsnack')
+def SNACK():
+    return render_template('snack.html')
+

@@ -1,4 +1,4 @@
-#This is where we initialize the flask application. LOL TCHUS
+#This is where we initialize the flask application. LOL TSCHUSS
 from flask import Flask
 def CREATE_APP():
     app=Flask(__name__)
